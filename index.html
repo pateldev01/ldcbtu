@@ -466,16 +466,22 @@
 
         // Store form data in session storage
         sessionStorage.setItem('userFormData', JSON.stringify(formData));
-    
+
         // Update the fetch URL to your hosted PHP endpoint
-        fetch('https://your-php-host.com/api/process-form.php', {
+        fetch('https://your-hosted-domain.com/api/process-form.php', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify(formData)
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.success) {
                 document.getElementById('pdfViewer').src = selectedPdfUrl;
