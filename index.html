@@ -467,7 +467,8 @@
         // Store form data in session storage
         sessionStorage.setItem('userFormData', JSON.stringify(formData));
     
-        fetch('process-form.php', {
+        // Update the fetch URL to your hosted PHP endpoint
+        fetch('https://your-php-host.com/api/process-form.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
