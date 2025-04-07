@@ -496,9 +496,16 @@
     }
 
     function closeModal() {
-      document.getElementById('myModal').style.display = "none"; // Hide the modal
-      document.getElementById('pdfViewer').src = ""; // Clear the PDF source
+      document.getElementById('myModal').style.display = "none";
+      document.getElementById('pdfViewer').src = "";
     }
+
+    // Add page refresh handler
+    window.addEventListener('load', function() {
+      if (performance.navigation.type === 1) {
+        sessionStorage.removeItem('userFormData');
+      }
+    });
 
     // Close the modal when clicking outside of it
     window.onclick = function(event) {
@@ -514,13 +521,4 @@
       }
     });
   </script>
-
-  <!-- // Remove the incorrectly placed code and add it properly inside the script tags
-  window.addEventListener('load', function() {
-    // Clear session storage when page is refreshed
-    if (performance.navigation.type === 1) { // 1 indicates page refresh
-        sessionStorage.removeItem('userFormData');
-    }
-  }); -->
-</html>
 </html>
