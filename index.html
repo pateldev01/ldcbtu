@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LD Capital Bridge to USA, LLC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Add EmailJS SDK and initialization -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // Initialize EmailJS with your public key
+      emailjs.init("niuYacor6zZLCRfth");
+    })();
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', serif;
+    }
+    
+    body {
+      background-color: #000033;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      overflow-y: auto;
+    }
+
+    .main-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      overflow-y: auto;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center; /* Add this to center vertically */
+      max-width: 1200px; /* Add max-width for better layout control */
+    }
+
+    .logo-container {
+      width: 210px;
+      margin: 0 auto 20px; /* Adjusted margin */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .filter-buttons {
+      width: 100%; /* Full width */
+      margin: 20px 0; /* Adjusted margin */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px; /* Consistent spacing between buttons */
+    }
+
+    .status-message {
+      text-align: center;
+      padding: 20px;
+      margin: 0 auto; /* Adjusted margin */
+      width: 100%;
+      max-width: 800px; /* Add max-width for better readability */
+    }
+
+    .company-name {
+      color: #ffffff;
+      font-size: 2.07rem;
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+
+    .maintenance-title {
+      color: #00b8e6;
+      font-size: 2.875rem;
+      margin-bottom: 15px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .maintenance-text {
+      color: #ffffff;
+      font-size: 1.38rem;
+      margin-bottom: 5px;
+    }
+
+    .return-text {
+      color: #ffffff;
+      font-size: 1.38rem;
+      margin-bottom: 30px;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-heading {
+      color: #ffffff;
+      font-size: 1.38rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .email-links {
+      color: #ffffff;
+      font-size: 1.265rem;
+    }
+
+    .email-links a {
+      color: #00b8e6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .email-links a:hover {
+      color: #ffffff;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 50%; /* Center horizontally */
+      top: 50%; /* Center vertically */
+      width: 85%; /* Full width */
+      height: 85%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      padding-top: 0; /* No padding */
+      transform: translate(-50%, -50%); /* Center the modal */
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 0; /* No margin */
+      padding: 0; /* No padding */
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: hidden; 
+    }
+
+    .modal-content iframe {
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      border: none; /* No border */
+      overflow: auto; /* Enable scrolling for the PDF */
+    }
+
+    .close {
+      color: #000000; /* Change color to white for better visibility */
+      float: right;
+      font-size: 36px; /* Increase font size */
+      font-weight: bold;
+      padding-right: 10px; 
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .filter-btn {
+        font-size: 1.2em; /* Adjust font size for mobile */
+        padding: 10px 20px; /* Adjust padding for mobile */
+      }
+
+      .modal {
+        width: 95%; /* Adjust modal width for mobile */
+        height: 95%; /* Adjust modal height for mobile */
+      }
+
+      .modal-content iframe {
+        height: 100%; /* Ensure iframe takes full height */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="logo-container">
+      <img src="img/LD Capital Bridge to USA logo-01.png" alt="Logo" class="logo">
+    </div>
+    
+    <div class="filter-buttons">
+      <a href="#" class="filter-btn" onclick="openModal('img/Brochure Hoschton, Georgia.pdf')">Hoschton</a>
+      <a href="#" class="filter-btn" onclick="openModal('img/Brochure North Georgia Marriott Hotel Portfolio EB5.pdf')">North Georgia</a>
+      <a href="#" class="filter-btn" onclick="openModal('img/Brochure South Georgia Marriott Hotel - EB5.pdf')">South Georgia</a>
+      
+    </div>
+    <!-- <h2>Click on Projects for more details</h2><br> -->
+    <div class="status-message">
+
+      
+      <h2 class="company-name">LD Capital Bridge to USA, LLC</h2>
+      <h1 class="maintenance-title">Website Under Maintenance</h1>
+      <p class="maintenance-text">We are currently performing scheduled maintenance to enhance your experience.</p>
+      <p class="return-text">We'll be back soon!</p>
+      
+      <div class="contact-info">
+        <p class="contact-heading">For any inquiries, please contact us at:</p>
+        <p class="email-links">
+          <a href="mailto:info@ldcbtusa.com">info@ldcbtusa.com</a> | 
+          <a href="mailto:admin@ldcbtusa.com">admin@ldcbtusa.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe id="pdfViewer" src="" scrolling="yes"></iframe>
+    </div>
+  </div>
+
+  <!-- Update the form modal content -->
+  <div id="formModal" class="modal">
+    <div class="modal-content form-content">
+      <span class="close" onclick="closeFormModal()">&times;</span>
+      <form id="inquiryForm" onsubmit="handleFormSubmit(event)">
+        <h2>Request Brochure</h2>
+        <p class="form-subtitle">Please provide your information to access the brochure</p>
+        
+        <div class="form-group">
+          <input type="text" id="name" name="name" required>
+          <label for="name">Full Name</label>
+        </div>
+        
+        <div class="form-group">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email Address</label>
+        </div>
+        
+        <div class="form-group">
+          <input type="tel" id="phone" name="phone" required>
+          <label for="phone">Phone Number</label>
+        </div>
+        
+        <div class="form-group">
+          <select id="interest" name="interest" required>
+            <option value="" disabled selected>Select Your Interest</option>
+            <option value="investment">Investment Opportunities</option>
+            <option value="partnership">Partnership</option>
+            <option value="information">General Information</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <textarea id="message" name="message"></textarea>
+          <label for="message">Additional Comments</label>
+        </div>
+  
+        <button type="submit" class="submit-btn">
+          <span>View Brochure</span>
+          <div class="loading-spinner"></div>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Update the styles -->
+  <style>
+    .form-content {
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 450px;
+      margin: 20px auto;
+      color: #333;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    }
+  
+    .form-content h2 {
+      color: #000033;
+      font-size: 24px;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+  
+    .form-subtitle {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  
+    .form-group {
+      margin-bottom: 24px;
+      position: relative;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+  
+    .form-group label {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      background: white;
+    }
+  
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+    }
+  
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 12px;
+      font-size: 12px;
+      padding: 0 4px;
+      color: #7c3aed;
+    }
+  
+    .submit-btn {
+      background-color: #7c3aed;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+  
+    .submit-btn:hover {
+      background-color: #6d28d9;
+      transform: translateY(-1px);
+    }
+  
+    .submit-btn:active {
+      transform: translateY(1px);
+    }
+  
+    .loading-spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #fff;
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+  
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  
+    .close {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      color: #666;
+      font-size: 24px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+  
+    .close:hover {
+      color: #333;
+    }
+  </style>
+
+  <script>
+    let selectedPdfUrl = '';
+  
+    function openModal(pdfUrl) {
+        const storedFormData = sessionStorage.getItem('userFormData');
+        
+        if (storedFormData) {
+            // User has already submitted the form
+            document.getElementById('pdfViewer').src = pdfUrl;
+            document.getElementById('myModal').style.display = "block";
+        } else {
+            // Show form modal for first-time users
+            selectedPdfUrl = pdfUrl;
+            document.getElementById('formModal').style.display = "block";
+        }
+    }
+  
+    function closeFormModal() {
+      document.getElementById('formModal').style.display = "none";
+    }
+  
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        const submitBtn = event.target.querySelector('.submit-btn');
+        const spinner = submitBtn.querySelector('.loading-spinner');
+        const btnText = submitBtn.querySelector('span');
+        
+        submitBtn.disabled = true;
+        spinner.style.display = 'inline-block';
+        btnText.style.opacity = '0.5';
+    
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            interest: document.getElementById('interest').value,
+            message: document.getElementById('message').value,
+            brochure: selectedPdfUrl.split('/').pop()
+        };
+    
+        // Store form data in session storage
+        sessionStorage.setItem('userFormData', JSON.stringify(formData));
+    
+        fetch('process-form.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('pdfViewer').src = selectedPdfUrl;
+                document.getElementById('myModal').style.display = "block";
+                closeFormModal();
+            } else {
+                throw new Error(data.message || 'Failed to send email');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error processing your request. Please try again.');
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            spinner.style.display = 'none';
+            btnText.style.opacity = '1';
+        });
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = "none"; // Hide the modal
+      document.getElementById('pdfViewer').src = ""; // Clear the PDF source
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+      if (event.target == document.getElementById('myModal')) {
+        closeModal();
+      }
+    }
+
+    // Close the modal using the ESC key
+    window.addEventListener('keydown', function(event) {
+      if (event.key === "Escape") { // Check if the ESC key is pressed
+        closeModal();
+      }
+    });
+  </script>
+
+  // Add this near the top of your script section
+  window.addEventListener('load', function() {
+      // Clear session storage when page is refreshed
+      if (performance.navigation.type === 1) { // 1 indicates page refresh
+          sessionStorage.removeItem('userFormData');
+      }
+  });
+</html>
+</html>
