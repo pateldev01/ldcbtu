@@ -37,36 +37,63 @@
       flex-direction: column;
       padding: 20px;
       overflow-y: auto;
-      margin: 0 auto;
-      align-items: center;
-      justify-content: center; /* Add this to center vertically */
-      max-width: 1200px; /* Add max-width for better layout control */
+      margin: 0 auto; /* Center the container */
+      align-items: center; /* Center items horizontally */
     }
 
     .logo-container {
-      width: 210px;
-      margin: 0 auto 20px; /* Adjusted margin */
+      width: 219px;
+      margin: 50px auto 30px; /* Adjusted margin for better centering */
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative; /* Added for precise positioning */
     }
 
+    .logo {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 219px; /* Added max-width */
+      margin: 0 auto; /* Center horizontally */
+    }
+    
     .filter-buttons {
-      width: 100%; /* Full width */
-      margin: 20px 0; /* Adjusted margin */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px; /* Consistent spacing between buttons */
+      position: relative;
+      margin: auto;
+      text-align: center;
+      display: flex; /* Use flexbox for alignment */
+      justify-content: center; /* Center buttons */
+      flex-wrap: wrap; /* Allow buttons to wrap */
+      margin-bottom: 0px;
+    }
+
+    .filter-btn {
+      display: inline-block;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px; /* Adjust margin for spacing */
+      padding: 12px 24px; /* Increased padding for better appearance */
+      background: linear-gradient(90deg, #00b8e6, #007bb8); /* Gradient background */
+      color: white;
+      font-size: 1.5em; /* Increased font size for better visibility */
+      border-radius: 25px;
+      transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+      text-decoration: none; /* Remove underline */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
+      
+    }
+
+    .filter-btn:hover {
+      transform: scale(1.05); /* Slight zoom effect */
+      background: linear-gradient(90deg, #007bb8, #00b8e6); /* Reverse gradient on hover */
+      border-color: #00b8e6; /* Sky blue border on hover */
     }
 
     .status-message {
       text-align: center;
       padding: 20px;
-      margin: 0 auto; /* Adjusted margin */
-      width: 100%;
-      max-width: 800px; /* Add max-width for better readability */
+      margin: 20px auto;
     }
 
     .company-name {
@@ -488,12 +515,12 @@
     });
   </script>
 
-  // Add this near the top of your script section
+  <!-- // Remove the incorrectly placed code and add it properly inside the script tags
   window.addEventListener('load', function() {
-      // Clear session storage when page is refreshed
-      if (performance.navigation.type === 1) { // 1 indicates page refresh
-          sessionStorage.removeItem('userFormData');
-      }
-  });
+    // Clear session storage when page is refreshed
+    if (performance.navigation.type === 1) { // 1 indicates page refresh
+        sessionStorage.removeItem('userFormData');
+    }
+  }); -->
 </html>
 </html>
